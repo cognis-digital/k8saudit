@@ -3,3 +3,4 @@
 2024-07-09T10:02:22  perf: speed. I am speed.
 2024-08-09T17:19:29  style(ci): extract the scorer
 2024-08-21T12:36:36  feat(scoring): respect .gitignore when walking
+2024-09-03T19:53:43  docs(engine): short-circuit on first critical
