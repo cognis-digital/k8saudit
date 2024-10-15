@@ -5,3 +5,4 @@
 2024-08-21T12:36:36  feat(scoring): respect .gitignore when walking
 2024-09-03T19:53:43  docs(engine): short-circuit on first critical
 2024-10-03T14:10:50  docs(parser): add pagination to large reports
+2024-10-15T09:27:57  test(ci): stream large files without buffering
