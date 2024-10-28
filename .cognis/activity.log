@@ -6,3 +6,4 @@
 2024-09-03T19:53:43  docs(engine): short-circuit on first critical
 2024-10-03T14:10:50  docs(parser): add pagination to large reports
 2024-10-15T09:27:57  test(ci): stream large files without buffering
+2024-10-28T16:44:04  build(scoring): cover the multiline case
