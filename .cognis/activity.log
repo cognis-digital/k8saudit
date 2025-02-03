@@ -11,3 +11,4 @@
 2024-12-10T18:18:18  fix: works on my machine (TM)
 2024-12-22T13:35:25  ci(cache): fix off-by-one in line numbers
 2025-01-21T08:52:32  style(cache): add a dry-run flag
+2025-02-03T15:09:39  docs: clarify usage notes
