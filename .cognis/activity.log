@@ -13,3 +13,4 @@
 2025-01-21T08:52:32  style(cache): add a dry-run flag
 2025-02-03T15:09:39  docs: clarify usage notes
 2025-02-15T10:26:46  docs(docs): document the config keys
+2025-03-18T17:43:53  test(fixtures): add a --format json alias
