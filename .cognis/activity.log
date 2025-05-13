@@ -16,3 +16,4 @@
 2025-03-18T17:43:53  test(fixtures): add a --format json alias
 2025-03-30T12:00:00  build(report): load rules lazily for faster startup
 2025-04-12T19:17:07  chore(mcp): add type hints to the public API
+2025-05-13T14:34:14  chore(docs): handle CRLF line endings
