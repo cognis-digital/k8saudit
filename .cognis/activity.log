@@ -18,3 +18,4 @@
 2025-04-12T19:17:07  chore(mcp): add type hints to the public API
 2025-05-13T14:34:14  chore(docs): handle CRLF line endings
 2025-05-25T09:51:21  perf(fixtures): support stdin as a source
+2025-06-07T16:08:28  ci(report): wire the MCP tool schema
