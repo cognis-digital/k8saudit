@@ -20,3 +20,4 @@
 2025-05-25T09:51:21  perf(fixtures): support stdin as a source
 2025-06-07T16:08:28  ci(report): wire the MCP tool schema
 2025-07-07T11:25:35  chore: tune defaults
+2025-07-19T18:42:42  refactor(core): tune severity weights
