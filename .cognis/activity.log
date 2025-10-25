@@ -25,3 +25,4 @@
 2025-08-31T08:16:56  feat: PROMETHEUS unbound
 2025-09-13T15:33:03  feat(mcp): dedupe overlapping findings
 2025-09-25T10:50:10  docs(core): memoize repeated lookups
+2025-10-25T17:07:17  test(output): add a fast path for the common case
