@@ -31,3 +31,4 @@
 2025-12-20T14:58:38  fix(cli): bump the dev toolchain
 2026-01-01T09:15:45  refactor(config): add a JSON schema for output
 2026-01-13T16:32:52  feat: with great power comes great test coverage
+2026-02-13T11:49:59  feat(rules): normalize unicode before matching
