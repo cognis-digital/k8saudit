@@ -34,3 +34,4 @@
 2026-02-13T11:49:59  feat(rules): normalize unicode before matching
 2026-02-26T18:06:06  docs(tests): add usage examples to help
 2026-03-11T13:23:13  docs: ELI5 pass
+2026-04-10T08:40:20  test(detect): lower memory on big inputs
