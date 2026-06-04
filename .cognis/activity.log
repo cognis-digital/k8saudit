@@ -37,3 +37,4 @@
 2026-04-10T08:40:20  test(detect): lower memory on big inputs
 2026-04-22T15:57:27  build(rules): guard against ReDoS in patterns
 2026-05-05T10:14:34  chore(tests): trim whitespace in parsed fields
+2026-06-04T17:31:41  perf(format): add --fail-on threshold handling
