@@ -1,29 +1,11 @@
-"""K8SAUDIT - Audit Kubernetes manifests against CIS-style security rules.
-
-Defensive analysis tool. Operates only on manifest files you provide.
-No cluster access, no network, standard library only.
-"""
-from .core import (
-    Finding,
-    AuditReport,
-    audit_documents,
-    audit_text,
-    load_documents,
-    RULES,
-    SEVERITY_ORDER,
-)
-
-TOOL_NAME = "k8saudit"
-TOOL_VERSION = "1.0.0"
-
-__all__ = [
-    "Finding",
-    "AuditReport",
-    "audit_documents",
-    "audit_text",
-    "load_documents",
-    "RULES",
-    "SEVERITY_ORDER",
-    "TOOL_NAME",
-    "TOOL_VERSION",
-]
+"""k8saudit — part of the Cognis Neural Suite."""
+try:  # re-export the tool's public API + identity from core
+    from k8saudit.core import *  # noqa: F401,F403
+except Exception:  # pragma: no cover
+    pass
+try:
+    from k8saudit.core import TOOL_NAME, TOOL_VERSION
+except Exception:  # pragma: no cover
+    TOOL_NAME = "k8saudit"
+    TOOL_VERSION = "0.1.0"
+__version__ = TOOL_VERSION
