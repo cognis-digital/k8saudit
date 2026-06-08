@@ -1,0 +1,10 @@
+{
+  "name": "@cognis/k8saudit",
+  "version": "0.2.0",
+  "description": "JavaScript port of k8saudit (Cognis Neural Suite)",
+  "bin": {
+    "k8saudit": "index.js"
+  },
+  "license": "LicenseRef-COCL-1.0",
+  "type": "module"
+}
