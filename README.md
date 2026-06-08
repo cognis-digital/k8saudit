@@ -36,8 +36,9 @@ Audit Kubernetes manifests against CIS-style security rules — without standing
 <a name="features"></a>
 ## Features
 
-- ✅ Scan
-- ✅ To Json
+- ✅ Load Documents
+- ✅ Audit Documents
+- ✅ Audit Text
 - ✅ Runs on Linux/macOS/Windows · Docker · devcontainer
 - ✅ Ports in Python, JavaScript, Go, and Rust (`ports/`)
 
