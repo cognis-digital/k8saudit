@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata: { name: k8saudit, labels: { app: k8saudit } }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: k8saudit } }
+  template:
+    metadata: { labels: { app: k8saudit } }
+    spec:
+      containers:
+        - name: k8saudit
+          image: ghcr.io/cognis-digital/k8saudit:latest
+          ports: [{ containerPort: 8000 }]
+          resources:
+            requests: { cpu: "50m", memory: "64Mi" }
+            limits: { cpu: "500m", memory: "256Mi" }
+---
+apiVersion: v1
+kind: Service
+metadata: { name: k8saudit }
+spec:
+  selector: { app: k8saudit }
+  ports: [{ port: 80, targetPort: 8000 }]
