@@ -16,7 +16,7 @@
 </div>
 
 ```bash
-pip install cognis-k8saudit
+pip install "git+https://github.com/cognis-digital/k8saudit.git"
 k8saudit scan .            # → prioritized findings in seconds
 ```
 
@@ -48,7 +48,7 @@ Audit Kubernetes manifests against CIS-style security rules — without standing
 ## Quick start
 
 ```bash
-pip install cognis-k8saudit
+pip install "git+https://github.com/cognis-digital/k8saudit.git"
 k8saudit --version
 k8saudit scan .                       # scan current project
 k8saudit scan . --format json         # machine-readable
