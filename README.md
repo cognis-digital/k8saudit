@@ -20,6 +20,32 @@ pip install cognis-k8saudit
 k8saudit scan .            # → prioritized findings in seconds
 ```
 
+## Usage — step by step
+
+1. **Install** (Python 3.8+, stdlib only):
+   ```bash
+   pip install k8saudit
+   ```
+2. **Scan Kubernetes manifests** with CIS-style static rules (no cluster access):
+   ```bash
+   k8saudit scan deployment.yaml service.yaml
+   ```
+3. **Pipe a rendered manifest stream via stdin** (`-` or omit the path), optionally filter by severity:
+   ```bash
+   helm template ./chart | k8saudit scan - --min-severity HIGH
+   ```
+4. **Read the output as JSON or write an HTML report** (`--format` / `-o` are on the `scan` subcommand):
+   ```bash
+   k8saudit scan manifests/*.yaml --format json | jq '.counts, .findings[]'
+   k8saudit scan manifests/*.yaml --format html -o k8saudit-report.html
+   ```
+   JSON includes `counts` (CRITICAL/HIGH/MEDIUM/LOW/INFO) and `findings[]` with rule_id and remediation.
+5. **Gate CI** — block a deploy when high-severity findings exist:
+   ```bash
+   k8saudit scan manifests/*.yaml --format json | jq -e '.counts.CRITICAL==0 and .counts.HIGH==0' || exit 1
+   ```
+
+
 ## Contents
 
 - [Why k8saudit?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
