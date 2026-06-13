@@ -98,7 +98,7 @@ h1{font-size:22px;margin:0 0 4px}
 .card{flex:1;min-width:120px;background:#1e293b;border-left:5px solid #334155;border-radius:8px;padding:14px 16px}
 .card .num{font-size:28px;font-weight:700}
 .card .lab{font-size:12px;letter-spacing:.08em;color:#94a3b8}
-table{width:100%;border-collapse:collapse;background:#1e293b;border-radius:8px;overflow:hidden;font-size:13px}
+table{width:100%%;border-collapse:collapse;background:#1e293b;border-radius:8px;overflow:hidden;font-size:13px}
 th,td{text-align:left;padding:9px 12px;border-bottom:1px solid #334155;vertical-align:top}
 th{background:#0b1220;color:#94a3b8;text-transform:uppercase;font-size:11px;letter-spacing:.06em}
 tr:last-child td{border-bottom:none}

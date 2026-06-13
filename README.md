@@ -20,6 +20,12 @@ pip install "git+https://github.com/cognis-digital/k8saudit.git"
 k8saudit scan .            # → prioritized findings in seconds
 ```
 
+<!-- cognis:layman:start -->
+## What is this?
+
+K8SAUDIT reads the configuration files you use to deploy software on Kubernetes (a popular system for running applications in the cloud) and checks them for common security mistakes — like giving containers more system access than they need or running processes as the administrator account. It works entirely from your local files, no internet connection or cloud account required. You get a clear list of issues sorted by severity, in plain text, JSON, or a browser-readable HTML report, so you can fix problems before they reach production. It is aimed at developers, DevOps engineers, and security teams who want a fast, no-setup way to catch misconfigurations in their Kubernetes setups.
+<!-- cognis:layman:end -->
+
 ## Contents
 
 - [Why k8saudit?](#why) · [Features](#features) · [Quick start](#quick-start) · [Example](#example) · [Architecture](#architecture) · [AI stack](#ai-stack) · [How it compares](#how-it-compares) · [Integrations](#integrations) · [Install anywhere](#install-anywhere) · [Related](#related) · [Contributing](#contributing)
@@ -45,6 +51,42 @@ Audit Kubernetes manifests against CIS-style security rules — without standing
 <div align="right"><a href="#top">↑ back to top</a></div>
 
 <a name="quick-start"></a>
+<!-- cognis:install:start -->
+## Install
+
+`k8saudit` is source-available (not published to PyPI) — every method below installs
+straight from GitHub. Pick whichever you prefer; the one-line scripts auto-detect
+the best tool available on your machine.
+
+**One-liner (Linux / macOS):**
+```sh
+curl -fsSL https://raw.githubusercontent.com/cognis-digital/k8saudit/HEAD/install.sh | sh
+```
+
+**One-liner (Windows PowerShell):**
+```powershell
+irm https://raw.githubusercontent.com/cognis-digital/k8saudit/HEAD/install.ps1 | iex
+```
+
+**Or install manually — any one of:**
+```sh
+pipx install "git+https://github.com/cognis-digital/k8saudit.git"     # isolated (recommended)
+uv tool install "git+https://github.com/cognis-digital/k8saudit.git"  # uv
+pip install "git+https://github.com/cognis-digital/k8saudit.git"      # pip
+```
+
+**From source:**
+```sh
+git clone https://github.com/cognis-digital/k8saudit.git
+cd k8saudit && pip install .
+```
+
+Then run:
+```sh
+k8saudit --help
+```
+<!-- cognis:install:end -->
+
 ## Quick start
 
 ```bash
