@@ -22,8 +22,13 @@ _SEV_COLORS = {
 def _read_inputs(paths: List[str]) -> str:
     if not paths or paths == ["-"]:
         return sys.stdin.read()
+    import os
     chunks = []
     for p in paths:
+        if not os.path.exists(p):
+            raise FileNotFoundError("file not found: %s" % p)
+        if not os.path.isfile(p):
+            raise IsADirectoryError("path is not a file: %s" % p)
         with open(p, "r", encoding="utf-8") as fh:
             chunks.append(fh.read())
     return "\n---\n".join(chunks)

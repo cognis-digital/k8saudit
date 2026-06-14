@@ -196,7 +196,7 @@ def _parse_list(lines: List[_Line], idx: int, indent: int):
             else:
                 result.append(None)
                 idx = nxt
-        elif ":" in item_text and not (item_text[0] in "'\""):
+        elif ":" in item_text and item_text[0] not in "'\"":
             # Inline map start: '- key: val'. Build a synthetic sub-block.
             # The item's own content sits at indent+2 conceptually.
             item_indent = line.indent + 2
@@ -224,7 +224,7 @@ def _parse_yaml_doc(doc_text: str) -> Any:
         raw_lines.append(_Line(indent, stripped.strip() if False else stripped.lstrip(" ")))
     if not raw_lines:
         return None
-    base = min(l.indent for l in raw_lines)
+    base = min(ln.indent for ln in raw_lines)
     value, _ = _parse_block(raw_lines, 0, base)
     return value
 

@@ -32,3 +32,10 @@ k8saudit = "k8saudit.cli:main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["k8saudit"]
+
+[tool.ruff]
+line-length = 120
+
+[tool.ruff.lint]
+select = ["F", "E"]
+ignore = ["E501"]
