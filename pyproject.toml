@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "cognis-k8saudit"
-version = "0.1.0"
+version = "0.1.1"
 description = "Audit Kubernetes manifests against CIS-style security rules"
 authors = [{name = "Cognis Digital", email = "suite@cognis.digital"}]
 license = {text = "LicenseRef-COCL-1.0"}
@@ -20,6 +20,7 @@ classifiers = [
 ]
 
 [project.optional-dependencies]
+connect = ["cognis-connect @ git+https://github.com/cognis-digital/cognis-connect.git"]
 mcp = ["mcp>=1.0"]
 dev = ["pytest>=8.0"]
 
@@ -28,6 +29,7 @@ Homepage = "https://cognis.digital"
 Repository = "https://github.com/cognis-digital/k8saudit"
 
 [project.scripts]
+"k8saudit-emit" = "k8saudit.connect:emit_main"
 k8saudit = "k8saudit.cli:main"
 
 [tool.hatch.build.targets.wheel]
