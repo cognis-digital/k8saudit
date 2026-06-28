@@ -20,6 +20,74 @@ pip install cognis-k8saudit
 k8saudit scan .            # → prioritized findings in seconds
 ```
 
+
+<!-- cognis:example:start -->
+## 🔎 Example output
+
+Real, reproducible output from the tool — runs offline:
+
+```console
+$ k8saudit-emit --version
+k8saudit 0.1.0
+```
+
+```console
+$ k8saudit-emit --help
+usage: k8saudit [-h] [--version] {scan} ...
+
+Audit Kubernetes manifests against CIS-style security rules.
+
+positional arguments:
+  {scan}
+    scan      Scan manifest file(s) for security issues.
+
+options:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit
+```
+
+> Blocks above are real `k8saudit` output — reproduce them from a clone.
+
+**Sample result format** _(illustrative values — run on your own data for real findings):_
+
+```
+{
+"finding": [
+{
+"id": "123456",
+"category": "Network",
+"description": "Potential unauthorized access to Kubernetes cluster",
+"severity": 3,
+"created_at": "2022-07-15T14:30:00Z",
+"updated_at": "2022-07-15T14:30:00Z",
+"remediation": "Review and update network policies",
+"references": [
+{
+"type": "link",
+"url": "https://kubernetes.io/docs/concepts/security/network-policies/"
+}
+]
+},
+{
+"id": "789012",
+"category": "Authentication",
+"description": "Weak password detected for user 'admin'",
+"severity": 2,
+"created_at": "2022-07-15T14:30:00Z",
+"updated_at": "2022-07-15T14:30:00Z",
+"remediation": "Change password to a strong one",
+"references": [
+{
+"type": "link",
+"url": "https://kubernetes.io/docs/tasks/access-application-cluster/configure-access-control-and-proxy/"
+}
+]
+}
+]
+```
+
+<!-- cognis:example:end -->
+
 ## Usage — step by step
 
 1. **Install** (Python 3.8+, stdlib only):

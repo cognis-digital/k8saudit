@@ -1,0 +1,13 @@
+$ k8saudit-emit --help
+
+usage: k8saudit [-h] [--version] {scan} ...
+
+Audit Kubernetes manifests against CIS-style security rules.
+
+positional arguments:
+  {scan}
+    scan      Scan manifest file(s) for security issues.
+
+options:
+  -h, --help  show this help message and exit
+  --version   show program's version number and exit

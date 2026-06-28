@@ -1,0 +1,3 @@
+$ k8saudit-emit --version
+
+k8saudit 0.1.0
